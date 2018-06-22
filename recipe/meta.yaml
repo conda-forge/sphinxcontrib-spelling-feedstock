@@ -1,6 +1,6 @@
 {% set name = "sphinxcontrib-spelling" %}
-{% set version = "4.1.0" %}
-{% set sha256 = "769381eb5c791b7ff671457feeae5702142d231ba091a415e0eda695f221358b" %}
+{% set version = "4.2.0" %}
+{% set sha256 = "44a9445b237ade895ae1fccbe6f41422489b1ffb2a026c1b78b0c1c1c229f9bf" %}
 
 package:
   name: {{ name|lower }}

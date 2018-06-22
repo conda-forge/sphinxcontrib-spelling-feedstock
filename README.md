@@ -17,12 +17,15 @@ a report showing misspelled words.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/sphinxcontrib-spelling-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/sphinxcontrib-spelling-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/sphinxcontrib-spelling-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/sphinxcontrib-spelling-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sphinxcontrib-spelling/badges/version.svg)](https://anaconda.org/conda-forge/sphinxcontrib-spelling)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sphinxcontrib-spelling/badges/downloads.svg)](https://anaconda.org/conda-forge/sphinxcontrib-spelling)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-sphinxcontrib--spelling-green.svg)](https://anaconda.org/conda-forge/sphinxcontrib-spelling) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sphinxcontrib-spelling.svg)](https://anaconda.org/conda-forge/sphinxcontrib-spelling) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sphinxcontrib-spelling.svg)](https://anaconda.org/conda-forge/sphinxcontrib-spelling) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sphinxcontrib-spelling.svg)](https://anaconda.org/conda-forge/sphinxcontrib-spelling) |
 
 Installing sphinxcontrib-spelling
 =================================

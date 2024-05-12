@@ -1,6 +1,6 @@
 {% set name = "sphinxcontrib-spelling" %}
-{% set version = "4.3.0" %}
-{% set sha256 = "0304dac9286378f9c608af8d885a08fe03a9c62b3ebfa8802008018d92371c19" %}
+{% set version = "5.1.2" %}
+{% set sha256 = "7f220647f1d9270bd90f0a42146b75a03c51a60184ced6584a9e5ef8f385b5a1" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - pbr
   run:
-    - python    
+    - python
 
 test:
   imports:
@@ -33,7 +33,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'This package contains sphinxcontrb.spelling, a spelling checker for Sphinx-based documentation.'
+  summary: This package contains sphinxcontrb.spelling, a spelling checker for Sphinx-based documentation.
   description: |
     This package contains sphinxcontrb.spelling, a spelling checker 
     for Sphinx-based documentation. It uses PyEnchant to produce 

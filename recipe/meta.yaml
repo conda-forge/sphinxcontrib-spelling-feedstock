@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinxcontrib-spelling-{{ version }}.tar.gz
   sha256: 199d0a16902ad80c387c2966dc9eb10f565b1fb15ccce17210402db7c2443e5c
+  patches:
+    - 0001-gracefully-handle-if-git-is-not-installed.patch
 
 build:
   noarch: python
@@ -31,9 +33,17 @@ test:
     - sphinxcontrib.spelling
   commands:
     - pip check
+    # Workaround for bug in hunspell that breaks pyenchant
+    # See: https://github.com/conda-forge/hunspell-feedstock/issues/12
+    - ln -s $CONDA_PREFIX/share/hunspell_dictionaries $CONDA_PREFIX/share/enchant/hunspell
+    - python -m pytest -vv
+  source_files:
+    - tests/
+    - tox.ini
   requires:
     - python {{ python_min }}
     - pip
+    - pytest
 
 about:
   home: https://sphinxcontrib-spelling.readthedocs.io/en/latest/

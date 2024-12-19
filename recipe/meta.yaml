@@ -1,5 +1,5 @@
 {% set name = "sphinxcontrib-spelling" %}
-{% set version = "8.0.0" %}
+{% set version = "8.0.1" %}
 {% set python_min = "3.7" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinxcontrib-spelling-{{ version }}.tar.gz
-  sha256: 199d0a16902ad80c387c2966dc9eb10f565b1fb15ccce17210402db7c2443e5c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f0447b6413c78b613b916c7891e36be85a105d1919c99784c53dfea2d8f8040f
   patches:
     - 0001-gracefully-handle-if-git-is-not-installed.patch
 

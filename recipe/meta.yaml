@@ -32,9 +32,6 @@ test:
     - sphinxcontrib.spelling
   commands:
     - pip check
-    # Workaround for bug in hunspell that breaks pyenchant
-    # See: https://github.com/conda-forge/hunspell-feedstock/issues/12
-    - ln -s $CONDA_PREFIX/share/hunspell_dictionaries $CONDA_PREFIX/share/enchant/hunspell
     - python -m pytest -vv
   source_files:
     - tests/

@@ -1,16 +1,14 @@
 {% set name = "sphinxcontrib-spelling" %}
-{% set version = "8.0.0" %}
-{% set python_min = "3.7" %}
+{% set version = "8.0.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinxcontrib-spelling-{{ version }}.tar.gz
-  sha256: 199d0a16902ad80c387c2966dc9eb10f565b1fb15ccce17210402db7c2443e5c
-  patches:
-    - 0001-gracefully-handle-if-git-is-not-installed.patch
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f0447b6413c78b613b916c7891e36be85a105d1919c99784c53dfea2d8f8040f
 
 build:
   noarch: python
@@ -27,6 +25,7 @@ requirements:
     - python >={{ python_min }}
     - pyenchant >=3.1.1
     - sphinx >=3.0.0
+    - requests >=2.32.3
 
 test:
   imports:
@@ -35,7 +34,7 @@ test:
     - pip check
     # Workaround for bug in hunspell that breaks pyenchant
     # See: https://github.com/conda-forge/hunspell-feedstock/issues/12
-    - ln -s $CONDA_PREFIX/share/hunspell_dictionaries $CONDA_PREFIX/share/enchant/hunspell
+    - ln -s $CONDA_PREFIX/share/hunspell_dictionaries $CONDA_PREFIX/share/hunspell
     - python -m pytest -vv
   source_files:
     - tests/

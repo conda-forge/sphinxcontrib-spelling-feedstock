@@ -9,8 +9,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: f0447b6413c78b613b916c7891e36be85a105d1919c99784c53dfea2d8f8040f
-  patches:
-    - 0001-gracefully-handle-if-git-is-not-installed.patch
 
 build:
   noarch: python

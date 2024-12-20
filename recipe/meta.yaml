@@ -34,7 +34,7 @@ test:
     - pip check
     # Workaround for bug in hunspell that breaks pyenchant
     # See: https://github.com/conda-forge/hunspell-feedstock/issues/12
-    - ln -s $CONDA_PREFIX/share/hunspell_dictionaries $CONDA_PREFIX/share/enchant-2/hunspell
+    - ln -s $CONDA_PREFIX/share/hunspell_dictionaries $CONDA_PREFIX/share/hunspell
     - python -m pytest -vv
   source_files:
     - tests/

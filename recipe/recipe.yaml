@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sphinxcontrib-spelling
-  version: 8.0.1
+  version: "8.0.2"
   python_min: 3.10
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: f0447b6413c78b613b916c7891e36be85a105d1919c99784c53dfea2d8f8040f
+  sha256: afbc7b8e93721ab88f12bdd39d848b92017b3763b9ed6226b4b0e54b06664fea
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 

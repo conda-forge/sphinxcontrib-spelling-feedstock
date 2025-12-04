@@ -15,7 +15,6 @@ This package contains sphinxcontrb.spelling, a spelling checker
 for Sphinx-based documentation. It uses PyEnchant to produce
 a report showing misspelled words.
 
-
 Current build status
 ====================
 

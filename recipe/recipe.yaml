@@ -38,7 +38,6 @@ tests:
   - files:
       source:
         - tests/
-        - tox.ini
     requirements:
       run:
         - python ${{ python_min }}
